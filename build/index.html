@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>WB L2 Map</title>
+	<link rel="icon" href="./favicon.ico">
+
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+	integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+	crossorigin=""/>
+
+	<!-- Make sure you put this AFTER Leaflet's CSS -->
+	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+	integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+	crossorigin=""></script>
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-extra-markers/dist/css/leaflet.extra-markers.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/leaflet-extra-markers/dist/js/leaflet.extra-markers.min.js"></script>
+<script defer src="main.cc3c5159999494fe85ad.js"></script></head>
+
+<body>
+	<div class="modal modal_create">
+		<div class="modal_content">
+
+			<img class="close close_create" src="./close-outline.svg" alt="">
+
+			<div class="input_wrapper">
+				<p class="inputText">Введите тип маркера:</p>
+				<input class="input input1" type="text">
+			</div>
+
+			<div class="input_wrapper">
+				<p class="inputText">Введите название маркера:</p>
+				<input class="input input2" type="text">
+			</div>
+
+			<div class="input_wrapper">
+				<p class="inputText">Введите описание маркера:</p>
+				<input  class="input input3" type="text">
+			</div>
+
+			<div class="input_wrapper">
+				<p class="inputText">Выберите цвет маркера:</p>
+				<select id="color_create" class="color_select">
+				  <option value="blue">Синий</option>
+				  <option value="green">Зеленый</option>
+				  <option value="red">Красный</option>
+				</select>
+			 </div>
+			 
+
+			<button class="submit_button">Добавить!</button>
+		</div>
+	</div>
+
+
+	<div class="modal modal_reduct">
+		<div class="modal_content">
+
+			<img class="close close_reduct" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/%D0%98%D0%BA%D0%BE%D0%BD%D0%BA%D0%B0_%D0%BA%D1%80%D0%B5%D1%81%D1%82%D0%B8%D0%BA%D0%B0_%28ei%29.svg/1200px-%D0%98%D0%BA%D0%BE%D0%BD%D0%BA%D0%B0_%D0%BA%D1%80%D0%B5%D1%81%D1%82%D0%B8%D0%BA%D0%B0_%28ei%29.svg.png" alt="">
+
+			<div class="input_wrapper">
+				<p class="inputText">Введите тип маркера:</p>
+				<input class="input input1_reduct" type="text">
+			</div>
+
+			<div class="input_wrapper">
+				<p class="inputText">Введите название маркера:</p>
+				<input class="input input2_reduct" type="text">
+			</div>
+
+			<div class="input_wrapper">
+				<p class="inputText">Введите описание маркера:</p>
+				<input  class="input input3_reduct" type="text">
+			</div>
+
+			<div class="input_wrapper">
+				<p class="inputText">Выберите цвет маркера:</p>
+				<select id="color_reduct" class="color_select2">
+				  <option value="blue">Синий</option>
+				  <option value="green">Зеленый</option>
+				  <option value="red">Красный</option>
+				</select>
+			 </div>
+			 
+
+			<button class="submit_button sb_reduct">Изменить!</button>
+		</div>
+	</div>
+
+	<div class="display_wrapper">
+		<div class="sidebar_2">
+			<div class="filter">
+				<p class="filter_item">Sort</p>
+			</div>
+			<sidebar class="sidebar">
+			</sidebar>
+		</div>
+		<div id="map"></div>
+	</div>
+</body>
+
+</html>
